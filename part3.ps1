@@ -1,4 +1,4 @@
 write-output "part31" > part3.txt
-write-outpukt "part32" 
-start-sleeps -seconds 61
-exit 1
+write-output "part32" 
+start-sleep -seconds 6
+exit 0
