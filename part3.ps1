@@ -1,3 +1,3 @@
 write-output "part31" > part3.txt
 write-output "part32" 
-start-sleep -seconds 62
+start-sleeps -seconds 62
