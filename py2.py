@@ -1,3 +1,3 @@
 import time
 print("something")
-time.sleep(51) 
+time.sleep(50) 
