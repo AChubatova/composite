@@ -33,6 +33,7 @@ version = "2020.1"
 project {
 
     vcsRoot(Wer)
+    vcsRoot(Sdf)
     vcsRoot(Ccccc)
 
     buildType(VerConfig)
@@ -119,6 +120,17 @@ object Ccccc : GitVcsRoot({
     authMethod = password {
         userName = "AChubatova"
         password = "credentialsJSON:87118950-7042-4c13-8cd3-7cfb37660a92"
+    }
+})
+
+object Sdf : GitVcsRoot({
+    name = "sdf"
+    url = "sdf"
+    pushUrl = "sdf"
+    authMethod = uploadedKey {
+        userName = "AChubatova"
+        uploadedKey = "chubatovapemkeyubuntu"
+        passphrase = "credentialsJSON:6f68164e-189b-41ec-9f34-690deb3b610a"
     }
 })
 
