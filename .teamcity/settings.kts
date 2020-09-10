@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.gitlabConnection
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 /*
@@ -33,6 +34,15 @@ project {
 
     buildType(VerConfig)
     buildType(Kuj)
+
+    features {
+        gitlabConnection {
+            id = "PROJECT_EXT_3"
+            displayName = "GitLab.com"
+            applicationId = "adfsdf"
+            clientSecret = "credentialsJSON:e3ee4ed7-26f2-4e57-ac02-e0604c4b0a77"
+        }
+    }
 }
 
 object Kuj : BuildType({
