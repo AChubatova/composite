@@ -68,6 +68,13 @@ project {
             clientId = "ыва"
             clientSecret = "credentialsJSON:cdf34052-34db-4613-adb5-21b0eb0595a4"
         }
+        feature {
+            id = "PROJECT_EXT_8"
+            type = "JetBrains.SharedResources"
+            param("quota", "-1")
+            param("name", "sdkj")
+            param("type", "quoted")
+        }
     }
 }
 
