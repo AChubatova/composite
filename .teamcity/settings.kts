@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.bitbucketCloudConnection
+import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.dockerECRRegistry
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.gitlabConnection
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
@@ -48,6 +49,17 @@ project {
             displayName = "Bitbucket Cloud"
             key = "fghfgh"
             clientSecret = "credentialsJSON:2cd072fc-d14e-4bd1-abfd-657e074a5520"
+        }
+        dockerECRRegistry {
+            id = "PROJECT_EXT_5"
+            displayName = "Amazon ECR"
+            registryId = "sdfsdf"
+            credentialsProvider = accessKey {
+                accessKeyId = "sdfsdf"
+                secretAccessKey = "credentialsJSON:7f506411-440a-419a-95dc-005d51917c6f"
+            }
+            regionCode = "us-west-2"
+            credentialsType = accessKeys()
         }
     }
 }
