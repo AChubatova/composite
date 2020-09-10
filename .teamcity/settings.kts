@@ -34,6 +34,7 @@ project {
 
     vcsRoot(Wer)
     vcsRoot(Sdf)
+    vcsRoot(Sdfsdd)
     vcsRoot(Ccccc)
 
     buildType(VerConfig)
@@ -131,6 +132,16 @@ object Sdf : GitVcsRoot({
         userName = "AChubatova"
         uploadedKey = "chubatovapemkeyubuntu"
         passphrase = "credentialsJSON:6f68164e-189b-41ec-9f34-690deb3b610a"
+    }
+})
+
+object Sdfsdd : GitVcsRoot({
+    name = "sdfsdd"
+    url = "sdf"
+    authMethod = uploadedKey {
+        userName = "asd"
+        uploadedKey = "chubatovapemkeyubuntu"
+        passphrase = "credentialsJSON:69a872c3-8839-42a7-824d-a108f4627075"
     }
 })
 
