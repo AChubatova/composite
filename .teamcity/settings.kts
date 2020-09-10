@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.bitbucketCloudConnection
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.gitlabConnection
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
@@ -41,6 +42,12 @@ project {
             displayName = "GitLab.com"
             applicationId = "adfsdf"
             clientSecret = "credentialsJSON:e3ee4ed7-26f2-4e57-ac02-e0604c4b0a77"
+        }
+        bitbucketCloudConnection {
+            id = "PROJECT_EXT_4"
+            displayName = "Bitbucket Cloud"
+            key = "fghfgh"
+            clientSecret = "credentialsJSON:2cd072fc-d14e-4bd1-abfd-657e074a5520"
         }
     }
 }
