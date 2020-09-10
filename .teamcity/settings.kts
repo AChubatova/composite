@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.bitbucketCloudConnection
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.dockerECRRegistry
+import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.githubConnection
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.gitlabConnection
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
@@ -60,6 +61,12 @@ project {
             }
             regionCode = "us-west-2"
             credentialsType = accessKeys()
+        }
+        githubConnection {
+            id = "PROJECT_EXT_6"
+            displayName = "GitHub.com"
+            clientId = "ыва"
+            clientSecret = "credentialsJSON:cdf34052-34db-4613-adb5-21b0eb0595a4"
         }
     }
 }
