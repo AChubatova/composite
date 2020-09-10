@@ -101,6 +101,7 @@ object VerConfig : BuildType({
 
     params {
         param("a", "a")
+        password("s", "credentialsJSON:4005b82e-ce40-414c-a626-afcdb3957801")
     }
 
     vcs {
