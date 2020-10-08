@@ -4,5 +4,5 @@ print("Message410771")
 
 
 print("Printed immediately.")
-time.sleep(2.4)
+time.sleep(180)
 print("Printed after 2.4 seconds.")
