@@ -1,4 +1,3 @@
-Start-Process powershell -Verb runAs Administrator
-write-output "part21" > part2.txt
-write-output "part2" 
-start-sleep -seconds 120
+import sys, arcgisscripting
+gp = arcgisscripting.create(9.3)
+print gp.setproduct(sys.argv[1])
