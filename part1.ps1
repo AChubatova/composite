@@ -1,6 +1,4 @@
-write-output "part11" > part1.txt
-write-output "part18" 
-start-sleep -seconds 11
-exit 0
-
+import sys, arcgisscripting
+gp = arcgisscripting.create(9.3)
+print gp.setproduct(sys.argv[1])
 
