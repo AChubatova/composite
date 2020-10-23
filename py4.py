@@ -1,6 +1,7 @@
 
 import time
 print("Message410771")
+  import time
 
 
 print("Printed immediately.")
