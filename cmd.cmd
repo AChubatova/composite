@@ -1,1 +1,1 @@
-echo cmd
+echo cmd2
