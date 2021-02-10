@@ -1,9 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
-import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.bitbucketCloudConnection
-import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.dockerECRRegistry
-import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.githubConnection
-import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.gitlabConnection
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 /*
@@ -28,129 +23,29 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2020.1"
+version = "2020.2"
 
 project {
 
-    vcsRoot(Wer)
-    vcsRoot(Sdf)
-    vcsRoot(Sdfsdd)
-    vcsRoot(Ccccc)
+    vcsRoot(HttpsGithubComAChubatovaIntroToPytest)
 
-    buildType(VerConfig)
-    buildType(Kuj)
-
-    features {
-        gitlabConnection {
-            id = "PROJECT_EXT_3"
-            displayName = "GitLab.com"
-            applicationId = "adfsdf"
-            clientSecret = "credentialsJSON:e3ee4ed7-26f2-4e57-ac02-e0604c4b0a77"
-        }
-        bitbucketCloudConnection {
-            id = "PROJECT_EXT_4"
-            displayName = "Bitbucket Cloud"
-            key = "fghfgh"
-            clientSecret = "credentialsJSON:2cd072fc-d14e-4bd1-abfd-657e074a5520"
-        }
-        dockerECRRegistry {
-            id = "PROJECT_EXT_5"
-            displayName = "Amazon ECR"
-            registryId = "sdfsdf"
-            credentialsProvider = accessKey {
-                accessKeyId = "sdfsdf"
-                secretAccessKey = "credentialsJSON:7f506411-440a-419a-95dc-005d51917c6f"
-            }
-            regionCode = "us-west-2"
-            credentialsType = accessKeys()
-        }
-        githubConnection {
-            id = "PROJECT_EXT_6"
-            displayName = "GitHub.com"
-            clientId = "ыва"
-            clientSecret = "credentialsJSON:cdf34052-34db-4613-adb5-21b0eb0595a4"
-        }
-        feature {
-            id = "PROJECT_EXT_8"
-            type = "JetBrains.SharedResources"
-            param("quota", "-1")
-            param("name", "sdkj")
-            param("type", "quoted")
-        }
-    }
+    buildType(Cfg)
 }
 
-object Kuj : BuildType({
-    name = "kuj"
-
-    params {
-        password("cc", "credentialsJSON:1ad49ae3-4731-4d39-8b8a-7a4fd8d7fc4b")
-        param("a", "a")
-        param("b", "b")
-        password("s", "credentialsJSON:4005b82e-ce40-414c-a626-afcdb3957801")
-    }
+object Cfg : BuildType({
+    name = "cfg"
 
     vcs {
         root(DslContext.settingsRoot)
-        root(Ccccc)
     }
 })
 
-object VerConfig : BuildType({
-    name = "ver config"
-
-    params {
-        param("a", "a")
-        password("s", "credentialsJSON:4005b82e-ce40-414c-a626-afcdb3957801")
-    }
-
-    vcs {
-        root(Wer)
-    }
-
-    steps {
-        script {
-            scriptContent = """echo "a""""
-        }
-    }
-})
-
-object Ccccc : GitVcsRoot({
-    name = "ccccc"
-    url = "https://github.com/AChubatova/errorexe"
-    pushUrl = "https://github.com/AChubatova/errorexe"
+object HttpsGithubComAChubatovaIntroToPytest : GitVcsRoot({
+    name = "https://github.com/AChubatova/intro-to-pytest"
+    url = "https://github.com/AChubatova/intro-to-pytest"
+    branch = "refs/heads/master"
     authMethod = password {
         userName = "AChubatova"
-        password = "credentialsJSON:87118950-7042-4c13-8cd3-7cfb37660a92"
-    }
-})
-
-object Sdf : GitVcsRoot({
-    name = "sdf"
-    url = "sdf"
-    pushUrl = "sdf"
-    authMethod = uploadedKey {
-        userName = "AChubatova"
-        uploadedKey = "chubatovapemkeyubuntu"
-        passphrase = "credentialsJSON:6f68164e-189b-41ec-9f34-690deb3b610a"
-    }
-})
-
-object Sdfsdd : GitVcsRoot({
-    name = "sdfsdd"
-    url = "sdf"
-    authMethod = uploadedKey {
-        userName = "asd"
-        uploadedKey = "chubatovapemkeyubuntu"
-        passphrase = "credentialsJSON:69a872c3-8839-42a7-824d-a108f4627075"
-    }
-})
-
-object Wer : GitVcsRoot({
-    name = "wer"
-    url = "https://github.com/AChubatova/67580"
-    authMethod = password {
-        userName = "AChubatova"
-        password = "credentialsJSON:87118950-7042-4c13-8cd3-7cfb37660a92"
+        password = "credentialsJSON:695fd8da-8062-492e-95b0-38331a81c0f4"
     }
 })
