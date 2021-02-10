@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
+import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.SvnVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -28,6 +29,7 @@ version = "2020.2"
 project {
 
     vcsRoot(HttpsGithubComAChubatovaIntroToPytest)
+    vcsRoot(Svnroot)
 
     buildType(Cfg)
 }
@@ -48,4 +50,11 @@ object HttpsGithubComAChubatovaIntroToPytest : GitVcsRoot({
         userName = "AChubatova"
         password = "credentialsJSON:695fd8da-8062-492e-95b0-38331a81c0f4"
     }
+})
+
+object Svnroot : SvnVcsRoot({
+    name = "svnroot"
+    url = "https://svn.svn"
+    userName = "AChubatova"
+    password = "credentialsJSON:1fcaf84b-fdf5-4bdc-a8b8-a000667ff38c"
 })
