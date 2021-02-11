@@ -44,9 +44,9 @@ object AspNet : BuildType({
 
     steps {
         dotnetBuild {
-            projects = "PartialTrustExample/PartialTrustExample.csproj"
+            projects = "lkj pk ://"
             logging = DotnetBuildStep.Verbosity.Minimal
-            sdk = "4,5,a"
+            sdk = "4"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
     }
