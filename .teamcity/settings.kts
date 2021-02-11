@@ -44,7 +44,7 @@ object AspNet : BuildType({
 
     steps {
         dotnetBuild {
-            projects = "lkj pk ://"
+            projects = "PartialTrustExample/PartialTrustExample.csproj"
             runtime = "-09df"
             logging = DotnetBuildStep.Verbosity.Minimal
             sdk = "4"
