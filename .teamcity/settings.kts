@@ -1,6 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.dotnetBuild
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
-import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.SvnVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -28,33 +28,34 @@ version = "2020.2"
 
 project {
 
-    vcsRoot(HttpsGithubComAChubatovaIntroToPytest)
-    vcsRoot(Svnroot)
+    vcsRoot(Netcoreproj)
 
-    buildType(Cfg)
+    buildType(AspNet)
 }
 
-object Cfg : BuildType({
-    name = "cfg"
+object AspNet : BuildType({
+    name = "asp net"
 
     vcs {
+        root(Netcoreproj)
         root(DslContext.settingsRoot)
     }
-})
 
-object HttpsGithubComAChubatovaIntroToPytest : GitVcsRoot({
-    name = "https://github.com/AChubatova/intro-to-pytest"
-    url = "https://github.com/AChubatova/intro-to-pytest"
-    branch = "refs/heads/master"
-    authMethod = password {
-        userName = "AChubatova"
-        password = "credentialsJSON:695fd8da-8062-492e-95b0-38331a81c0f4"
+    steps {
+        dotnetBuild {
+            projects = "PartialTrustExample/PartialTrustExample.csproj"
+            sdk = "4"
+            param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
+        }
     }
 })
 
-object Svnroot : SvnVcsRoot({
-    name = "svnroot"
-    url = "https://svn.svn"
-    userName = "AChubatova"
-    password = "credentialsJSON:1fcaf84b-fdf5-4bdc-a8b8-a000667ff38c"
+object Netcoreproj : GitVcsRoot({
+    name = "netcoreproj"
+    url = "https://github.com/xunit/samples.xunit"
+    branch = "refs/heads/main"
+    authMethod = password {
+        userName = "AChubatova"
+        password = "credentialsJSON:2f7cf5b5-9f65-4906-8df8-8460768267d2"
+    }
 })
