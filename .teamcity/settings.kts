@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.DotnetBuildStep
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.dotnetBuild
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
@@ -44,7 +45,8 @@ object AspNet : BuildType({
     steps {
         dotnetBuild {
             projects = "PartialTrustExample/PartialTrustExample.csproj"
-            sdk = "4,5"
+            logging = DotnetBuildStep.Verbosity.Minimal
+            sdk = "4"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
     }
