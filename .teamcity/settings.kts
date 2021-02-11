@@ -45,6 +45,7 @@ object AspNet : BuildType({
     steps {
         dotnetBuild {
             projects = "lkj pk ://"
+            framework = "klk lkj"
             logging = DotnetBuildStep.Verbosity.Minimal
             sdk = "4"
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
