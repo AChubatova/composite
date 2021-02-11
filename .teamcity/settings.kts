@@ -52,7 +52,7 @@ object AspNet : BuildType({
             param("dotNetCoverage.dotCover.home.path", "%teamcity.tool.JetBrains.dotCover.CommandLineTools.DEFAULT%")
         }
         script {
-            scriptContent = "a"
+            scriptContent = ""
         }
     }
 })
