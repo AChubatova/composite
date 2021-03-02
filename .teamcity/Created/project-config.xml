@@ -45,6 +45,24 @@
         <param name="username" value="" />
       </parameters>
     </extension>
+    <extension id="vmw-1" type="CloudProfile">
+      <parameters>
+        <param name="_image" value="" />
+        <param name="cloud-code" value="vmw" />
+        <param name="description" value="" />
+        <param name="enabled" value="true" />
+        <param name="name" value="w" />
+        <param name="next-hour" value="" />
+        <param name="profileId" value="vmw-1" />
+        <param name="profileServerUrl" value="" />
+        <param name="secure:vmware_password" value="credentialsJSON:7629d11b-52cf-4d31-9fb1-96c8c7809a50" />
+        <param name="terminate-idle-time" value="30" />
+        <param name="total-work-time" value="" />
+        <param name="vmware_profile_instance_limit" value="" />
+        <param name="vmware_server_url" value="http://localhost" />
+        <param name="vmware_username" value="a" />
+      </parameters>
+    </extension>
   </project-extensions>
   <cleanup />
 </project>
