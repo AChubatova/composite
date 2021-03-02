@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="13eec102-86a1-4c48-ad35-d2966848421c" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>snapdep</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_2" type="OAuthProvider">
+      <parameters>
+        <param name="clientId" value="a" />
+        <param name="displayName" value="GitLab CE/EE" />
+        <param name="gitLabUrl" value="http://localhost" />
+        <param name="providerType" value="GitLabCEorEE" />
+        <param name="secure:clientSecret" value="credentialsJSON:4ed57e79-37b9-4405-8f5f-48adacfab0d2" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

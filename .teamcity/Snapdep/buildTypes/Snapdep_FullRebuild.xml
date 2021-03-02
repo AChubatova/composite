@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4cbc7cd1-39e1-4433-873b-3c9c4be0f75f" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>FullRebuild</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="Snapdep_HttpsGithubComAChubatovaComposite" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <dependencies>
+      <depend-on sourceBuildTypeId="Snapdep_Porjecta">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="Snapdep_PorjectB">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

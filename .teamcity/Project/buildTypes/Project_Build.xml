@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="4b621ad4-4752-4653-9e72-35d2c66b206c" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>build</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_1" />
+      <setting-ref ref="RUNNER_2" />
+      <setting-ref ref="RUNNER_3" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_1" name="dir" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="dir" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_2" name="lfs version" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="&quot;C:\Program Files\Git\bin\git.exe&quot; lfs version" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_3" name="lfs env" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="&quot;C:\Program Files\Git\bin\git.exe&quot; lfs env" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_7" name="" type="dotnet-tools-inspectcode">
+        <parameters>
+          <param name="TargetDotNetFramework_4.8" value="true" />
+          <param name="dotnet-tools-inspectcode.solution" value="another/path" />
+          <param name="jetbrains.resharper-clt.clt-path" value="%teamcity.tool.jetbrains.resharper-clt.DEFAULT%" />
+          <param name="jetbrains.resharper-clt.platform" value="x64" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Project_HttpsGithubComAChubatovaLfsrepo">
+        <checkout-rule rule="+:repository/path =&gt; another/path" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

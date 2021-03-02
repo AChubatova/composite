@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="f76c86bb-1410-4627-b004-e9384999fc04" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>Porjecta</name>
+  <description />
+  <settings>
+    <parameters>
+      <param name="a" value="alert(location.href)" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_6" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[ls
+sleep 100]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Snapdep_HttpsGithubComAChubatovaComposite">
+        <checkout-rule rule="+:fold =&gt; ./" />
+      </vcs-entry-ref>
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <dependencies>
+      <depend-on sourceBuildTypeId="Snapdep_Shared">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+
