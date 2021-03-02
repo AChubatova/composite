@@ -1,1 +1,1 @@
-echo cmd
+echo cmda
