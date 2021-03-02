@@ -15,7 +15,7 @@
     </extension>
     <extension id="kube-1" type="CloudProfile">
       <parameters>
-        <param name="apiServerUrl" value="http://172.18.6.149" />
+        <param name="apiServerUrl" value="http://localhost" />
         <param name="authStrategy" value="unauthorized" />
         <param name="cloud-code" value="kube" />
         <param name="customPodTemplate" value="" />
