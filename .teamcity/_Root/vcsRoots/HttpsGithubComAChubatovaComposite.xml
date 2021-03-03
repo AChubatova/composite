@@ -6,7 +6,6 @@
   <param name="authMethod" value="PASSWORD" />
   <param name="branch" value="refs/heads/master" />
   <param name="ignoreKnownHosts" value="true" />
-  <param name="push_url" value="https://github.com/AChubatova/composite" />
   <param name="secure:password" value="credentialsJSON:65c3b830-1599-48dd-a87a-c4d82b4209e9" />
   <param name="submoduleCheckout" value="CHECKOUT" />
   <param name="url" value="https://github.com/AChubatova/composite" />
