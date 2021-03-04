@@ -15,7 +15,7 @@
       <parameters>
         <param name="clientId" value="a" />
         <param name="displayName" value="GitLab CE/EE" />
-        <param name="gitLabUrl" value="http://172.31.134.4:9090" />
+        <param name="gitLabUrl" value="http://localhost" />
         <param name="providerType" value="GitLabCEorEE" />
         <param name="secure:clientSecret" value="credentialsJSON:7629d11b-52cf-4d31-9fb1-96c8c7809a50" />
       </parameters>
