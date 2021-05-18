@@ -29,7 +29,7 @@ project {
     buildType(Tw71566)
 
     params {
-        param("a", "c")
+        param("a", "d")
     }
 }
 
