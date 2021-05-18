@@ -17,5 +17,8 @@ changeProject(DslContext.projectId) {
         update {
             param("a", "dd")
         }
+        add {
+            param("aa", "a")
+        }
     }
 }
