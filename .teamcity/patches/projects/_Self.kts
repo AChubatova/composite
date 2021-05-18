@@ -11,11 +11,8 @@ accordingly, and delete the patch script.
 */
 changeProject(DslContext.projectId) {
     params {
-        expect {
+        remove {
             param("a", "d")
-        }
-        update {
-            param("a", "dds")
         }
         add {
             param("aa", "a")
