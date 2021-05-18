@@ -29,7 +29,7 @@ project {
     buildType(A)
 
     params {
-        param("a", "a")
+        param("a", "c")
     }
 }
 
