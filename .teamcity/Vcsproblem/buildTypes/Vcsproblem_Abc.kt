@@ -6,6 +6,8 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 object Vcsproblem_Abc : BuildType({
     name = "abc"
 
+    buildNumberPattern = "${Vcsproblem_B.depParamRefs.buildNumber}"
+
     vcs {
         root(Vcsproblem.vcsRoots.Vcsproblem_HttpsGithubComAChubatovaComposite)
     }
