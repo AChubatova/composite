@@ -108,7 +108,7 @@ object B : BuildType({
 
     steps {
         script {
-            scriptContent = "sleep 80"
+            scriptContent = "sleep 120"
         }
     }
 
