@@ -22,7 +22,7 @@ version = "2021.1"
 
 project {
 
-    buildType(Abc)
+
     buildType(B)
 
     features {
@@ -74,25 +74,7 @@ project {
     }
 }
 
-object Abc : BuildType({
-    name = "abc"
 
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        script {
-            scriptContent = "sleep 300"
-        }
-    }
-
-    dependencies {
-        snapshot(B) {
-            reuseBuilds = ReuseBuilds.NO
-        }
-    }
-})
 
 object B : BuildType({
     name = "b"
