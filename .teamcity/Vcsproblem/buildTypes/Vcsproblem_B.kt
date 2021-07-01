@@ -17,6 +17,8 @@ object Vcsproblem_B : BuildType({
     }
 
     requirements {
-        contains("teamcity.agent.name", "jetbrains")
+        contains("teamcity.agent.name", "jetbrains", "RQ_1")
     }
+    
+    disableSettings("RQ_1")
 })
