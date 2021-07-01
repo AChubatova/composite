@@ -27,7 +27,7 @@ version = "2021.1"
 
 project {
 
-
+    buildType(A)
     buildType(B)
 
     features {
@@ -79,6 +79,20 @@ project {
     }
 }
 
+object Abc : BuildType({
+    name = "abc"
+    paused = true
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    steps {
+        script {
+            scriptContent = "sleep 300"
+        }
+    }
+})
 
 
 object B : BuildType({
