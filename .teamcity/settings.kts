@@ -94,7 +94,12 @@ object Abc : BuildType({
     }
 })
 
-
 object B : BuildType({
     name = "b"
+
+    steps {
+        script {
+            scriptContent = "sleep 60"
+        }
+    }
 })
