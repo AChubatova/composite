@@ -27,7 +27,7 @@ version = "2021.1"
 
 project {
 
-    buildType(A)
+    buildType(Abc)
     buildType(B)
 
     features {
