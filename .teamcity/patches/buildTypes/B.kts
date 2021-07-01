@@ -12,4 +12,10 @@ changeBuildType(RelativeId("B")) {
     vcs {
         add(DslContext.settingsRoot.id!!)
     }
+
+    requirements {
+        add {
+            contains("teamcity.agent.name", "jetbrains")
+        }
+    }
 }
