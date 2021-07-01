@@ -81,7 +81,6 @@ project {
 
 object Abc : BuildType({
     name = "abc"
-    paused = true
 
     vcs {
         root(DslContext.settingsRoot)
