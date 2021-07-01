@@ -15,7 +15,6 @@ object Project : Project({
 
     vcsRoot(Vcsproblem_HttpsGithubComAChubatovaComposite)
 
- buildType(Vcsproblem_Abc)
     buildType(Vcsproblem_B)
 
     params {
