@@ -58,6 +58,7 @@ object ChkprB : BuildType({
     name = "chkprB"
 
     params {
+        param("pw2", "12")
         param("par1", "pat1value")
         param("par2", "par2value")
         text("pwpr", "pdval0", allowEmpty = true)
