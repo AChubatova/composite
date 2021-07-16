@@ -100,6 +100,13 @@ object ChkprB : BuildType({
                 password("pwpr", "credentialsJSON:0f844515-5548-4c90-90e3-5b540a02ae56")
             }
         }
+        finishBuildTrigger {
+            buildType = "${ChkprA.id}"
+
+            buildParams {
+                password("pwpr", "credentialsJSON:a72f69d0-8928-48c0-bc12-5d1355b153de")
+            }
+        }
     }
 
     dependencies {
