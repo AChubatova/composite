@@ -62,6 +62,7 @@ object ChkprB : BuildType({
         param("par1", "pat1value")
         param("par2", "par2value")
         text("pwpr", "pdval0", allowEmpty = true)
+        password("pw3", "credentialsJSON:1cce7174-afb7-4b71-b3d2-2d834a73b86a")
     }
 
     vcs {
