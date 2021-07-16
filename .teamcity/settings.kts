@@ -61,8 +61,8 @@ object ChkprB : BuildType({
         param("pw2", "12")
         param("par1", "pat1value")
         param("par2", "par2value")
-        text("pwpr", "pdval0", allowEmpty = true)
         password("pw3", "credentialsJSON:1cce7174-afb7-4b71-b3d2-2d834a73b86a")
+        text("pwpr", "pdval0", allowEmpty = true)
     }
 
     vcs {
@@ -99,7 +99,7 @@ object ChkprB : BuildType({
             buildType = "${ChkprA.id}"
 
             buildParams {
-                password("pw3", "credentialsJSON:a3ef660f-06a1-4255-9b84-b06a6477fb46")
+                param("par1", "pat1value1")
             }
         }
         finishBuildTrigger {
