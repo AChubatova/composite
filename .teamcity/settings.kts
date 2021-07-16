@@ -103,7 +103,7 @@ object ChkprB : BuildType({
             }
         }
         finishBuildTrigger {
-            buildType = "${ChkprA.id}"
+            buildType = "${CheckparC.id}"
 
             buildParams {
                 param("par1", "pat1value62")
