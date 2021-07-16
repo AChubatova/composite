@@ -103,6 +103,7 @@ object ChkprB : BuildType({
             }
         }
         finishBuildTrigger {
+            enabled = false
             buildType = "${CheckparC.id}"
 
             buildParams {
