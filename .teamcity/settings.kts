@@ -109,8 +109,6 @@ object ChkprB : BuildType({
                 param("par1", "pat1value2")
             }
         }
-        
-        
         finishBuildTrigger {
             buildType = "${ChkprA.id}"
 
@@ -118,15 +116,6 @@ object ChkprB : BuildType({
                 param("par1", "pat1value59")
             }
         }
-        
-        finishBuildTrigger {
-            buildType = "${ChkprA.id}"
-
-            buildParams {
-                param("par1", "pat1value60")
-            }
-        }
-        
         finishBuildTrigger {
             buildType = "${ChkprA.id}"
 
@@ -134,7 +123,6 @@ object ChkprB : BuildType({
                 param("par1", "pat1value61")
             }
         }
-        
         finishBuildTrigger {
             buildType = "${ChkprA.id}"
 
@@ -142,7 +130,6 @@ object ChkprB : BuildType({
                 param("par1", "pat1value62")
             }
         }
-        
     }
 
     dependencies {
