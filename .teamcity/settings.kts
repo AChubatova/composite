@@ -99,7 +99,7 @@ object ChkprB : BuildType({
             buildType = "${ChkprA.id}"
 
             buildParams {
-                text("pwpr", "pdval1", allowEmpty = true)
+                password("pw3", "credentialsJSON:a3ef660f-06a1-4255-9b84-b06a6477fb46")
             }
         }
         finishBuildTrigger {
