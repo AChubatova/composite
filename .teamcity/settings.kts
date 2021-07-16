@@ -102,10 +102,6 @@ object ChkprB : BuildType({
         }
         finishBuildTrigger {
             buildType = "${ChkprA.id}"
-
-            buildParams {
-                password("pwpr", "credentialsJSON:a72f69d0-8928-48c0-bc12-5d1355b153de")
-            }
         }
     }
 
