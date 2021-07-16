@@ -113,6 +113,7 @@ object ChkprB : BuildType({
 
     dependencies {
         snapshot(CheckparC) {
+            reuseBuilds = ReuseBuilds.NO
         }
         snapshot(ChkprA) {
             reuseBuilds = ReuseBuilds.NO
