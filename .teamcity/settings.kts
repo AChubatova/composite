@@ -69,6 +69,7 @@ object ChkprB : BuildType({
 
     triggers {
         finishBuildTrigger {
+            enabled = false
             buildType = "${ChkprA.id}"
 
             buildParams {
