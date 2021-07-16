@@ -191,7 +191,7 @@ object ChkprB : BuildType({
             attempts = 2
 
             buildParams {
-                param("par1", "134")
+                param("par1", "2")
             }
         }
         retryBuild {
