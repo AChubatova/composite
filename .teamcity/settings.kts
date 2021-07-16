@@ -97,7 +97,7 @@ object ChkprB : BuildType({
             buildType = "${ChkprA.id}"
 
             buildParams {
-                param("pwpr", "asd")
+                param("pwpr", "345")
             }
         }
         finishBuildTrigger {
