@@ -60,6 +60,7 @@ object ChkprB : BuildType({
     params {
         param("par1", "pat1value")
         param("par2", "par2value")
+        param("pwpr", "peprval0")
     }
 
     vcs {
