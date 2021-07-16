@@ -102,6 +102,10 @@ object ChkprB : BuildType({
         }
         finishBuildTrigger {
             buildType = "${ChkprA.id}"
+
+            buildParams {
+                text("pwpr", "pdval2", allowEmpty = true)
+            }
         }
     }
 
