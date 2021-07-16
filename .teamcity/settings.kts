@@ -194,6 +194,13 @@ object ChkprB : BuildType({
                 param("par1", "134")
             }
         }
+        retryBuild {
+            attempts = 2
+
+            buildParams {
+                param("par1", "134987")
+            }
+        }
     }
 
     dependencies {
