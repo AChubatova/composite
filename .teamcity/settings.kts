@@ -1,7 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.finishBuildTrigger
-import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.retryBuild
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.schedule
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 
@@ -185,12 +184,6 @@ object ChkprB : BuildType({
 
             buildParams {
                 param("par1", "pat1valuefromVCSsecond")
-            }
-        }
-        retryBuild {
-
-            buildParams {
-                param("par1", "3")
             }
         }
     }
