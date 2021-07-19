@@ -113,6 +113,7 @@ object ChkprB : BuildType({
             successfulOnly = true
 
             buildParams {
+                param("cbv", "cbvvalue")
                 param("par1", "pat1value1")
             }
         }
