@@ -109,7 +109,6 @@ object ChkprB : BuildType({
             }
         }
         finishBuildTrigger {
-            enabled = false
             buildType = "${ChkprA.id}"
             successfulOnly = true
             branchFilter = "+:*_Release"
