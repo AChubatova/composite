@@ -114,7 +114,6 @@ object ChkprB : BuildType({
 
             buildParams {
                 param("cbv", "cbvvalue")
-                param("par1", "pat1value1")
             }
         }
         finishBuildTrigger {
