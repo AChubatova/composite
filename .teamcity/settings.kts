@@ -84,6 +84,7 @@ object ChkprB : BuildType({
                 
                 do
                 echo ${'$'}i
+                sleep 1
                 done
             """.trimIndent()
         }
