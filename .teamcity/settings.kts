@@ -107,10 +107,6 @@ object ChkprB : BuildType({
         finishBuildTrigger {
             buildType = "${ChkprA.id}"
             successfulOnly = true
-
-            buildParams {
-                param("cbv", "cbvvalue")
-            }
         }
         finishBuildTrigger {
             enabled = false
