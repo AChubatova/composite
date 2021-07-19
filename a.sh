@@ -1,3 +1,0 @@
-echo ca
-a
-f
