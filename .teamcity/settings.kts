@@ -111,7 +111,6 @@ object ChkprB : BuildType({
         finishBuildTrigger {
             buildType = "${ChkprA.id}"
             successfulOnly = true
-            branchFilter = "+:*_Release"
 
             buildParams {
                 param("par1", "pat1value62")
