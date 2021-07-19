@@ -79,7 +79,13 @@ object ChkprB : BuildType({
 
     steps {
         script {
-            scriptContent = "exit %par1%"
+            scriptContent = """
+                for i in ${'$'}(seq 1 1 1000)
+                
+                do
+                echo ${'$'}i
+                done
+            """.trimIndent()
         }
     }
 
