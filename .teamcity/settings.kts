@@ -33,6 +33,16 @@ project {
     buildType(ChkprA)
     buildType(ChkprB)
     buildType(CheckparC)
+
+    cleanup {
+        keepRule {
+            id = "KEEP_RULE_1"
+            keepAtLeast = builds(30)
+            dataToKeep = everything()
+            applyPerEachBranch = true
+            preserveArtifactsDependencies = true
+        }
+    }
 }
 
 object CheckparC : BuildType({
