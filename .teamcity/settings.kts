@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.schedule
 
 /*
@@ -116,6 +117,12 @@ object Folder5 : BuildType({
         root(DslContext.settingsRoot, "+:folder5 => folder5")
 
         checkoutMode = CheckoutMode.ON_SERVER
+    }
+
+    steps {
+        script {
+            scriptContent = "sleep 120"
+        }
     }
 
     triggers {
