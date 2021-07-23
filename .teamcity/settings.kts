@@ -88,7 +88,7 @@ object Folder4 : BuildType({
     name = "folder42"
 
     vcs {
-        root(DslContext.settingsRoot, "+:folder4 => folder4", "+:folder2 => folder2")
+        root(DslContext.settingsRoot, "+:folder4 => folder43", "+:folder2 => folder2")
 
         checkoutMode = CheckoutMode.ON_SERVER
     }
