@@ -2,3 +2,4 @@ b.txt
 k
 s
 f
+s
