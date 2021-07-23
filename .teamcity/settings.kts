@@ -27,6 +27,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2021.1"
 
 project {
+    archived = true
 
     buildType(Folder3)
     buildType(Folder2)
@@ -37,6 +38,7 @@ project {
 
 object Folder1 : BuildType({
     name = "folder1"
+    paused = true
 
     vcs {
         root(DslContext.settingsRoot, "+:folder1 => folder14")
@@ -47,6 +49,7 @@ object Folder1 : BuildType({
 
 object Folder2 : BuildType({
     name = "folder2"
+    paused = true
 
     vcs {
         root(DslContext.settingsRoot, "+:folder2 => folder2")
@@ -62,6 +65,7 @@ object Folder2 : BuildType({
 
 object Folder3 : BuildType({
     name = "folder3"
+    paused = true
 
     vcs {
         root(DslContext.settingsRoot, "+:folder3 => folder3")
@@ -87,6 +91,7 @@ object Folder3 : BuildType({
 
 object Folder4 : BuildType({
     name = "folder42"
+    paused = true
 
     vcs {
         root(DslContext.settingsRoot, "+:folder4 => folder43", "+:folder2 => folder2")
@@ -112,6 +117,7 @@ object Folder4 : BuildType({
 
 object Folder5 : BuildType({
     name = "folder5"
+    paused = true
 
     vcs {
         root(DslContext.settingsRoot, "+:folder5 => folder5")
