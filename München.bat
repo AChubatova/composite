@@ -1,1 +1,1 @@
-eco a
+echo a
