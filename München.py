@@ -1,2 +1,1 @@
-print("hi")
-w
+print("hi2")
